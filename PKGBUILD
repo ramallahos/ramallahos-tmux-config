@@ -1,6 +1,7 @@
 # Maintainer: Safwan Nayeem Yousuf <safwannayeemyousuf.com>
 pkgname=ramallahos-tmux-config
-pkgrel=1
+local pkgver
+local pkgrel
 pkgdesc="TMUX config for RamallahOS"
 arch=('any')
 url="https://github.com/ramallahos/$pkgname"
