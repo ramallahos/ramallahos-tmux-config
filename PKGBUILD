@@ -1,6 +1,5 @@
 # Maintainer: Safwan Nayeem Yousuf <safwannayeemyousuf.com>
 pkgname=ramallahos-tmux-config
-pkgver=1
 pkgrel=1
 pkgdesc="TMUX config for RamallahOS"
 arch=('any')
@@ -10,6 +9,14 @@ depends=('tmux' 'tmux-plugin-manager')
 makedepends=('coreutils')
 source=("$pkgname::git+$url.git")
 sha256sums=('SKIP')
+
+pkgver() {
+  date +%Y%m%d
+}
+
+pkgrel() {
+  date +%S
+}
 
 package() {
     cd "$pkgname"
