@@ -19,7 +19,7 @@ data=$( curl https://github.com/ramallahos/ramallahos-repo/tree/main/x86_64 | gr
 uppkgverdate=$( echo $data | awk -F "-" '{ print $2}' )
 uppkgrel=$( echo $data | awk -F "-" '{ print $3 }' )
 
-if [ $pkgverdate == $(date +%Y%m%d) ];
+if [ "$pkgverdate" == "$(date +%Y%m%d)" ];
 then
     pkgrel=$( echo "$uppkgrel + 1 " | bc )
 else
